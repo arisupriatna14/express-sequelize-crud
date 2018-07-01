@@ -1,0 +1,32 @@
+{
+  "name": "express-sequelize-crud",
+  "version": "1.0.0",
+  "description": "express sequelize crud",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treasure-fox-2018/express-sequelize-crud.git"
+  },
+  "keywords": [
+    "express",
+    "sequelize"
+  ],
+  "author": "arisupriatna14",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treasure-fox-2018/express-sequelize-crud/issues"
+  },
+  "homepage": "https://github.com/treasure-fox-2018/express-sequelize-crud#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0"
+  }
+}

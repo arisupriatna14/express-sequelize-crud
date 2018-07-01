@@ -1,0 +1,72 @@
+<%- include('../header/header') -%>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <table class="table">
+          <thead style="background: #FDD835">
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (let i = 0; i < dataTeacher.length; i++) { %>
+              <tr>
+                <td>
+                  <%= i + 1 %>
+                </td>
+                <td>
+                  <%= dataTeacher[i].first_name %>
+                </td>
+                <td>
+                  <%= dataTeacher[i].last_name %>
+                </td>
+                <td>
+                  <%= dataTeacher[i].email %>
+                </td>
+                <td>
+                  <a href="/teacher/edit/<%= dataTeacher[i].id %>" class="btn btn-primary">Edit</a>
+                  <a href="/teacher/delete/<%= dataTeacher[i].id %>" class="btn btn-primary">Delete</a>
+                </td>
+              </tr>
+              <% } %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-lg-4 col-md-12 col-sm-12">
+
+        <div class="card text-center">
+          <div class="card-header" style="background-color: #FBC02D">
+            <h5>Data School</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Data Student</h5>
+            <a href="/student" class="btn btn-primary">Show Data</a>
+            <a href="/student/add" class="btn btn-primary">Add Data</a>
+            <br>
+            <br>
+            <h5>Data Teacher</h5>
+            <a href="/teacher/add" class="btn btn-primary">Add Data</a>
+            <br>
+            <br>
+            <h5>Data Subject</h5>
+            <a href="/subject" class="btn btn-primary">Show Data</a>
+            <a href="/subject/add" class="btn btn-primary">Add Data</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+<%- include('../footer/footer') -%>

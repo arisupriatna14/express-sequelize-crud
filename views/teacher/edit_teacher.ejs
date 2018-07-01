@@ -1,0 +1,63 @@
+<%- include('../header/header') -%>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-header text-center" style="background-color: #FBC02D">
+            <h4>Edit Data Teacher</h4>
+          </div>
+          <div class="card-body">
+            <form action="/teacher/edit/<%= editTeacher.id %>" method="POST">
+              <div class="form-group">
+                <label for="fistName">First Name</label>
+                <input type="text" class="form-control" name="first_name" value="<%= editTeacher.first_name %>">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" name="last_name" value="<%= editTeacher.last_name %>">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" name="email" value="<%= editTeacher.email %>">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSuccess">
+                Save Edit
+              </button>
+
+              <!-- Modal -->
+              <%- include('../modal/modal.edit.ejs') -%>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="card text-center">
+          <div class="card-header" style="background-color: #FBC02D">
+            <h4>Data School</h4>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Data Student</h5>
+            <a href="/student" class="btn btn-primary">Show Data</a>
+            <a href="/student/add" class="btn btn-primary">Add Data</a>
+            <br>
+            <br>
+            <h5>Data Teacher</h5>
+            <a href="/teacher/add" class="btn btn-primary">Add Data</a>
+            <br>
+            <br>
+            <h5>Data Subject</h5>
+            <a href="/subject" class="btn btn-primary">Show Data</a>
+            <a href="/subject/add" class="btn btn-primary">Add Data</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <%- include('../footer/footer') -%>
